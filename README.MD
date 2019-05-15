@@ -7,10 +7,10 @@ It use Telegram for administrate projects configuration, and send notification t
 **WARN -> You need Ping handler system that catch pings, download and run this module [PingHandler](https://github.com/ArtemMurk/PingHandlerCore)**
 
 ## Dialog scheme
-![dialog scheme](https://github.com/ArtemMurk/TelegramPingHandler/blob/master/DBScheme.png)
+![dialog scheme](https://github.com/ArtemMurk/PingTelegram/blob/master/TeLegramDialogPing.png)
 
 ## Dialog scheme
-![db scheme](https://github.com/ArtemMurk/TelegramPingHandlerCore/blob/master/DBScheme.png)
+![db scheme](https://github.com/ArtemMurk/PingTelegram/blob/master/DBScheme.png)
 
 ## Contact Information
 If you have any questions I'd be happy to answer it.
