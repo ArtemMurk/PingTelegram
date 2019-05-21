@@ -1,6 +1,8 @@
 package com.murk.telegram.ping.handler.admin;
 
 import com.murk.telegram.ping.handler.admin.connect.TelegramPingBot;
+import com.murk.telegram.ping.handler.admin.service.PingServiceImpl;
+import com.murk.telegram.ping.handler.admin.utils.DialogServiceCache;
 import org.telegram.telegrambots.ApiContextInitializer;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
@@ -11,6 +13,8 @@ public class Main
         String username = args[0];
         String token = args[1];
         String secretKey = args[2];
+
+
         openTelegramConnection(username,token,secretKey);
     }
 
@@ -19,7 +23,7 @@ public class Main
         ApiContextInitializer.init();
         TelegramBotsApi botsApi = new TelegramBotsApi();
         try {
-            botsApi.registerBot(erhereumBot = new TelegramPingBot (username,token,secretKey));
+            botsApi.registerBot(erhereumBot = new TelegramPingBot (username,token,secretKey, PingServiceImpl.INSTANCE, DialogServiceCache.INSTANCE));
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
